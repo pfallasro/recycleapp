@@ -1,47 +1,49 @@
 angular.module('starter.services', [])
 
-  .factory('Chats', function () {
-    // Might use a resource here that returns a JSON array
-
-    // Some fake testing data
-    var chats = [{
+  .factory('TopRecyclers', function () {
+    var topRecyclers = [{
       id: 0,
       name: 'Ben Sparrow',
-      lastText: 'You on your way?',
+      score: '500',
+      career: 'Software Engineering',
       face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
     }, {
       id: 1,
       name: 'Max Lynx',
-      lastText: 'Hey, it\'s me',
+      score: '400',
+      career: 'Software Engineering',
       face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
     }, {
       id: 2,
       name: 'Adam Bradleyson',
-      lastText: 'I should buy a boat',
+      score: '300',
+      career: 'Software Engineering',
       face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
     }, {
       id: 3,
       name: 'Perry Governor',
-      lastText: 'Look at my mukluks!',
+      score: '200',
+      career: 'Software Engineering',
       face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
     }, {
       id: 4,
       name: 'Mike Harrington',
-      lastText: 'This is wicked good ice cream.',
+      score: '100',
+      career: 'Software Engineering',
       face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
     }];
 
     return {
       all: function () {
-        return chats;
+        return topRecyclers;
       },
-      remove: function (chat) {
-        chats.splice(chats.indexOf(chat), 1);
+      remove: function (recycler) {
+        topRecyclers.splice(topRecyclers.indexOf(recycler), 1);
       },
-      get: function (chatId) {
-        for (var i = 0; i < chats.length; i++) {
-          if (chats[i].id === parseInt(chatId)) {
-            return chats[i];
+      get: function (recyclerId) {
+        for (var i = 0; i < topRecyclers.length; i++) {
+          if (topRecyclers[i].id === parseInt(recyclerId)) {
+            return topRecyclers[i];
           }
         }
         return null;

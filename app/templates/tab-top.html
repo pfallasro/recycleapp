@@ -1,0 +1,15 @@
+<ion-view view-title="">
+  <ion-content>
+    <div class="padding-horizontal">
+      <h4>Top 5 Recyclers</h4>
+    </div>
+    <div class="list">
+      <a class="item item-thumbnail-left" ng-repeat="recycler in topRecyclers" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{recycler.face}}">
+        <h2>{{$index+1}}. {{recycler.name}}</h2>
+        <p>{{recycler.career}}</p>
+        <p>Score:{{recycler.score}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
