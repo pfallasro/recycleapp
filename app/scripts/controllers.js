@@ -1,6 +1,19 @@
 angular.module('starter.controllers', [])
 
-  .controller('ProfileCtrl', function ($scope) {
+  .controller('ProfileCtrl', function ($scope, $ionicModal, $cordovaBarcodeScanner) {
+
+    $scope.score = 100;
+
+    $scope.scarBarcode = function () {
+      $cordovaBarcodeScanner.scan().then(function(imageData) {
+        $scope.score += 50;
+        console.log(imageData.text);
+        console.log('format ' + imageData.format);
+      }, function (error) {
+        console.log('An error happend' + error);
+      });
+    };
+
   })
 
   .controller('TopCtrl', function ($scope, TopRecyclers) {
@@ -11,7 +24,13 @@ angular.module('starter.controllers', [])
     $scope.chat = TopRecyclers.get($stateParams.chatId);
   })
 
-  .controller('AccountCtrl', function ($scope) {
+  .controller('ActivitiesCtrl', function ($scope) {
+    $scope.settings = {
+      enableFriends: true
+    };
+  })
+
+  .controller('InfoCtrl', function ($scope) {
     $scope.settings = {
       enableFriends: true
     };
@@ -69,3 +88,5 @@ angular.module('starter.controllers', [])
     $scope.init();
 
   });
+
+

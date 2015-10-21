@@ -1,11 +1,11 @@
-<ion-view view-title="">
+<ion-view view-title="Profile">
   <ion-content class="padding">
-
     <div class="list card">
       <div class="item item-avatar item-icon-right">
         <img src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10641292_758556717539401_6233236325161753716_n.jpg?oh=20ece72ac75a93a7814fb45800b28bd5&oe=569277EF">
         <h2>Pablo Fallas</h2>
         <p>Software Engineering</p>
+        <p>Score: {{score}}</p>
         <i class="icon ion-edit"></i>
       </div>
 
@@ -34,7 +34,7 @@
         <div class="list card">
             <div class="row">
               <div class="col text-center">
-                <div>
+                <div ng-click="scarBarcode()">
                   <i class="icon ion-search icon-align-center assertive" style="font-size: 90px;"></i>
                   <h3 class="assertive link">Scan Code</h3>
                 </div>

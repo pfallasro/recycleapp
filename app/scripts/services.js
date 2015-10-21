@@ -9,10 +9,10 @@ angular.module('starter.services', [])
       face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
     }, {
       id: 1,
-      name: 'Max Lynx',
+      name: 'Pablo Fallas',
       score: '400',
       career: 'Software Engineering',
-      face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+      face: 'https://scontent-ord1-1.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10641292_758556717539401_6233236325161753716_n.jpg?oh=20ece72ac75a93a7814fb45800b28bd5&oe=569277EF'
     }, {
       id: 2,
       name: 'Adam Bradleyson',
